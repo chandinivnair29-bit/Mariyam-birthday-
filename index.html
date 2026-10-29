@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff6f2">
+<title>For Mariyam, Always ♡</title>
+<style>
+:root{
+  --paper:#ffffff;--ink:#293b4b;--rose:#9bbfdc;--rose2:#eaf5ff;
+  --plum:#547a9b;--gold:#c8dced;--muted:#718394;--green:#d9e8dc;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7}
+button{font:inherit;cursor:pointer}
+a{color:inherit}
+.cover{
+  min-height:100svh;display:grid;place-items:center;text-align:center;padding:28px 18px;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 15% 15%,#eef7ff 0,transparent 32%),radial-gradient(circle at 85% 80%,#f6fbff 0,transparent 32%),linear-gradient(145deg,#ffffff,#f8fcff 58%,#ffffff)
+}
+.cover:before,.cover:after{content:"✿";position:absolute;color:#8db9dc40;font-size:150px;pointer-events:none}
+.cover:before{top:2%;left:-20px;transform:rotate(-20deg)}.cover:after{bottom:0;right:-15px;transform:rotate(18deg)}
+.cover-inner{max-width:650px;position:relative;z-index:1}
+.eyebrow{font:11px/1.5 Arial,sans-serif;text-transform:uppercase;letter-spacing:.28em;color:var(--plum)}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(2.8rem,10vw,5.7rem);font-weight:normal;line-height:1.02;margin:20px 0 18px;letter-spacing:-.04em}
+h1 em{color:var(--rose);font-weight:normal}
+.subtitle{font-size:1.1rem;color:var(--muted);max-width:430px;margin:0 auto 28px}
+.seal{width:94px;height:94px;border-radius:50%;margin:28px auto 22px;background:#ffffff;border:1px solid #c9dfef;display:grid;place-items:center;font-size:2rem;box-shadow:0 8px 30px #9c68721a}
+.primary,.ghost{border:0;border-radius:999px;padding:13px 22px;background:var(--plum);color:white;box-shadow:0 8px 20px #77506b22;transition:transform .2s}
+.primary:hover,.ghost:hover{transform:translateY(-2px)}
+.tiny{font:12px Arial,sans-serif;color:var(--muted);margin-top:18px}
+.flower-sprig{position:absolute;pointer-events:none;color:#a7c9e4;opacity:.52;font-size:23px;letter-spacing:8px}
+.flower-sprig.left{left:4%;top:48%;transform:rotate(-18deg)}
+.flower-sprig.right{right:4%;top:28%;transform:rotate(18deg)}
+.floral-divider{display:flex;justify-content:center;gap:13px;align-items:center;color:#9dbfdb;margin:28px 0;font-size:18px}
+.floral-divider:before,.floral-divider:after{content:"";height:1px;width:62px;background:#dbeaf5}
+nav{position:sticky;top:0;z-index:10;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;padding:12px;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid #e2edf5}
+nav a{text-decoration:none;font:11px Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--plum)}
+main{overflow:hidden}
+section{padding:76px 18px;max-width:1050px;margin:auto}
+.section-kicker{font:11px Arial,sans-serif;letter-spacing:.23em;text-transform:uppercase;color:var(--rose);text-align:center;margin-bottom:12px}
+h2{text-align:center;font-size:clamp(2rem,6vw,3.3rem);font-weight:normal;line-height:1.15;margin-bottom:18px}
+.intro{max-width:650px;margin:0 auto;text-align:center;color:#725e65}
+.letter-card{max-width:760px;margin:32px auto 0;padding:clamp(24px,5vw,52px);background:#ffffff;border:1px solid #e1edf6;box-shadow:0 18px 55px #456c8810;position:relative}
+.letter-card:before{content:"";position:absolute;inset:9px;border:1px solid #edf5fb;pointer-events:none}
+.letter-card p{position:relative;margin-bottom:18px}
+.signature{font-style:italic;color:var(--rose);font-size:1.3rem;margin-bottom:0!important}
+.timeline{max-width:760px;margin:42px auto 0;position:relative}
+.timeline:before{content:"";position:absolute;left:20px;top:5px;bottom:5px;width:1px;background:#d9b1b7}
+.moment{position:relative;padding:0 0 32px 58px}
+.moment:last-child{padding-bottom:0}
+.dot{position:absolute;left:12px;top:7px;width:17px;height:17px;border-radius:50%;background:var(--paper);border:2px solid var(--rose)}
+.moment .year{font:10px Arial,sans-serif;text-transform:uppercase;letter-spacing:.18em;color:var(--rose)}
+.moment h3{font-size:1.35rem;font-weight:normal;margin:5px 0}
+.moment p{color:#725e65;margin-bottom:0}
+.memory-video{max-width:760px;margin:32px auto 0;background:#2f2630;padding:10px;border-radius:18px;box-shadow:0 18px 45px #3d2c3622}
+video{width:100%;display:block;border-radius:10px;background:#191519;max-height:70vh}
+.video-caption{text-align:center;color:var(--muted);font-style:italic;margin:14px auto 0;max-width:560px}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:36px}
+.photo{border:0;padding:0;background:#f2f8fc;overflow:hidden;border-radius:6px;aspect-ratio:3/4;position:relative}
+.photo:nth-child(5n+2){aspect-ratio:4/5}.photo:nth-child(7n){aspect-ratio:1/1}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.photo:hover img{transform:scale(1.045)}
+.gallery-note{text-align:center;font-size:.9rem;color:var(--muted);margin-top:16px}
+.promise{background:linear-gradient(140deg,#f2f8ff,#ffffff 50%,#f6fbff);max-width:none;padding:76px 18px}
+.promise-inner{max-width:760px;margin:auto;text-align:center}
+.promise blockquote{font-size:clamp(1.25rem,4vw,1.8rem);line-height:1.55;margin:28px 0;color:var(--plum)}
+.promise .small{max-width:590px;margin:0 auto;color:#725e65}
+.closing{padding-bottom:100px;text-align:center}
+.closing .big-heart{font-size:2rem;color:var(--rose);margin:20px}
+footer{text-align:center;padding:22px;font:11px Arial,sans-serif;letter-spacing:.08em;color:#9b858a;border-top:1px solid #e2edf5}
+.lightbox{position:fixed;inset:0;background:#1e1720ed;z-index:30;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:94vw;max-height:84vh;object-fit:contain;border-radius:4px}
+.close{position:absolute;top:18px;right:20px;border:1px solid #ffffff77;background:#ffffff12;color:#fff;border-radius:50%;width:42px;height:42px;font-size:24px}
+.hearts{position:fixed;inset:0;pointer-events:none;z-index:20;overflow:hidden}
+.heart{position:absolute;bottom:-30px;animation:float 5s linear forwards;opacity:.8}
+@keyframes float{to{transform:translateY(-110vh) rotate(30deg);opacity:0}}
+@media(max-width:620px){section{padding:58px 18px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.gallery .photo:nth-child(5n+2){aspect-ratio:3/4}nav{gap:11px;padding:11px 7px}nav a{font-size:9px}.letter-card{padding:28px 23px}.timeline:before{left:13px}.moment{padding-left:43px}.dot{left:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="cover" id="top">
+  <div class="flower-sprig left" aria-hidden="true">✿ ❀ ✧</div>
+  <div class="flower-sprig right" aria-hidden="true">❀ ✿ ✧</div>
+  <div class="cover-inner">
+    <div class="eyebrow">A little time capsule · 10 years of us</div>
+    <div class="seal">♡</div>
+    <h1>For Mariyam,<br><em>always.</em></h1>
+    <p class="subtitle">Ten years of growing up, growing apart, finding our way back, and choosing this friendship again and again.</p>
+    <button class="primary" id="openBtn">Open your little time capsule ♡</button>
+    <div class="tiny">Made with all the love I have for you.</div>
+  </div>
+</div>
+<nav aria-label="Page sections">
+  <a href="#letter">A letter</a><a href="#timeline">Our story</a><a href="#video">The rewind</a><a href="#music">Soundtrack</a><a href="#gallery">Little moments</a><a href="#promise">Always</a>
+</nav>
+<main>
+<section id="letter">
+  <div class="section-kicker">To my person</div>
+  <h2>Ten years, and still my favourite plot twist.</h2>
+  <p class="intro">If I tried to fit every memory into one page, we'd be here until we're eighty. So here's a little piece of our story — the bits I never want to forget.</p>
+  <article class="letter-card">
+    <p>Happy birthday, my love. ♡</p>
+    <p>It still makes me laugh that our story began on a bus to a school science symposium. You were in the front row, I was left without my usual people, and somehow I ended up sitting beside a girl from another section. I can't even remember who started the conversation — but I remember telling you your English accent was different, and you telling me about your family abroad. That little conversation became something I never could've predicted.</p>
+    <p>We properly became friends in ninth standard, and then came the days I wish I could bottle up forever: the same bench, Hindi tuition, shared tiffins, wandering around school to catch glimpses of our crushes, and me cycling you to the school bus and talking to you until the very last second. And yes, the legendary slaps. I remember both. I am choosing peace and not filing a case. </p>
+    <p>Then tenth ended and you left, and suddenly we had to learn how to be best friends from a distance. Eleventh and twelfth were hard in their own ways, but you were still my anchor in NSS. Later, we chose psychology — after approximately one million conversations about whether you should choose it at all. You went to St. Teresa's, I went to Sahardaya, and life got busy and complicated, but we kept finding our way back to each other.</p>
+    <p>I still think about that movie date I had to lie to my parents for, my first time at your house, cycling back with you and your sister, and all three of us getting absolutely drenched when the rain decided to join the outing. That memory lives rent-free in my head. So do the voice notes where I tried to explain psychology concepts to you, and all the little ways we kept showing up even when we couldn't be physically present.</p>
+    <p>And then there was the day you rode all the way to the railway station just to send me off. You had your own curfew to deal with, but you still came running to give me that huge hug. I wish I'd held on a little longer. I don't think you realise how deeply that moment touched me — or maybe you do, because that's just who you are when you love someone.</p>
+    <p>There's one memory I've carried quietly, because I know how tender it is. When you lost your grandmother — someone who saw you, loved you, and understood you so deeply — I was away in Dubai. I remember being awake with you, worrying about you, wishing with everything in me that I could be beside you in person. I have sometimes wished I could turn back time just to sit next to you and hold your hand through that day. I couldn't be there physically, and I'm sorry for that. I hope you never mistake my absence that day for a lack of love. If I could revisit one moment simply to be there with you, that would be one of them. I know no words can make that loss lighter, and I would never want this to take away from your birthday. I just wanted you to know how much I wished I could have been there.</p>
+    <p>Our lives have changed a lot since those school days. We've both had to leave places, people, and versions of ourselves behind. There have been beautiful days, difficult days, misunderstandings, disagreements, and times when we've felt a little lost. I won't pretend every chapter has been easy. But I do know this: we're both still figuring life out, and we don't have to have ourselves completely sorted to keep loving each other well.</p>
+    <p>You are clever, capable, funny, stubborn in the most Mariyam way, and so much more than the hard seasons you've had to get through. I hope you find your way back to every part of yourself you miss. And I hope you know that you don't have to be exactly the same person you were at fifteen for me to love you. I miss that girl sometimes — the one who slapped me over a crush and couldn't patiently open a pizza box — but I'm rooting for the woman you're becoming, too.</p>
+    <p>Thank you for being my anchor when I felt lost, for teaching me that life doesn't always have to be taken so seriously, for making me laugh when I was stuck in my own darkness, and for staying beside me through versions of myself that weren't always easy to understand. There were times I genuinely wondered how I would've made it through without you. You've mattered to my life more than I can properly explain.</p>
+    <p>I know I'm possessive about our friendship sometimes. I know life will keep bringing new people into both our worlds, and we'll keep changing. But I never want you to mistake the distance, the busy days, or the occasional disagreement for a lack of love. You will always have a place with me — a place where you can be loved, heard, messy, silly, quiet, confused, or completely yourself without having to perform.</p>
+    <p>I hope we get a thousand more ordinary days: more movie dates, more food, more ridiculous conversations, more hugs that last longer, more school-memory rewinds, more laughing until we can't breathe, and more chances to choose this friendship as we grow. If all we can manage in a difficult season is to hold on by a thin little thread, I'll still be grateful for that thread. I believe we'll look back one day and laugh at how dramatic some of these chapters felt.</p>
+    <p>People will come and go, and life will keep moving us around. But you are one of the people I want to keep choosing — not because we've known each other for ten years, but because after all these years, I still want you in the years ahead.</p>
+    <p>Happy birthday, my best friend. Here's to the girl I met on a bus, the girl who shared her school bench with me, the girl who ran to the railway station, and every version of you still waiting to be discovered. I love you. Always have, always will.</p>
+    <p class="signature">Your Chunnu, for the long run. ♡</p>
+  </article>
+</section>
+
+<section id="timeline">
+  <div class="section-kicker">A decade in little chapters</div>
+  <h2>Look how far we've come.</h2>
+  <div class="timeline">
+    <div class="moment"><span class="dot"></span><div class="year">The beginning</div><h3>The bus ride</h3><p>A science symposium, two girls from different sections, one conversation about an accent — and the start of a story neither of us knew we were beginning.</p></div>
+    <div class="moment"><span class="dot"></span><div class="year">Ninth & tenth standard</div><h3>The golden school days</h3><p>Same bench, Hindi tuition, shared tiffins, crush-spotting missions, cycling to the bus stop, and the kind of memories that still feel like home.</p></div>
+    <div class="moment"><span class="dot"></span><div class="year">After school</div><h3>Friends, even from far away</h3><p>Different colleges, different struggles, endless chats, psychology debates, voice notes, and the promise that distance wouldn't get the final say.</p></div>
+    <div class="moment"><span class="dot"></span><div class="year">The rain-soaked chapter</div><h3>Movie date & a rainy ride</h3><p>A movie, your home, a nearby river, a cycle ride back — and your sister and us getting drenched together. A core memory, permanently.</p></div>
+    <div class="moment"><span class="dot"></span><div class="year">The railway station</div><h3>The hug I wish lasted longer</h3><p>You made the trip just to send me off. You ran to hug me, and I carried that moment with me long after the train left.</p></div>
+    <div class="moment"><span class="dot"></span><div class="year">Now & next</div><h3>Still choosing us</h3><p>We're growing into new versions of ourselves. We may not always get it perfect, but there's still so much life, laughter, and friendship ahead of us.</p></div>
+  </div>
+</section>
+
+<section id="video">
+  <div class="section-kicker">Press play, take the long way back</div>
+  <h2>Back to where we began.</h2>
+  <p class="intro">A little rewind to the school we grew up in — and the girls we used to be. Some places hold entire versions of us.</p>
+  <div class="memory-video">
+    <video controls playsinline preload="metadata" poster="assets/1000230078.jpg">
+      <source src="assets/school-memory-video.mp4" type="video/mp4">
+      Your browser doesn't support this video. Try opening the website in a recent browser.
+    </video>
+  </div>
+  <p class="video-caption">If I could relive one chapter, I'd go back to those school days with you in a heartbeat.</p>
+</section>
+
+
+<section id="music">
+  <div class="section-kicker">A tiny soundtrack for our story</div>
+  <h2>Press play when you're ready.</h2>
+  <p class="intro">I picked two songs for two different sides of you: the unstoppable, brilliant woman I know, and the soft, hopeful feeling of wishing for a lifetime of little moments together. Music won't start automatically — tap play whenever you want.</p>
+  <div class="letter-card" style="max-width:760px;margin-top:30px">
+    <p><strong>For your strong, intelligent, wise, go-getter side:</strong> “Bad News” — Stellar, Black Gryph0n & Baasik.</p>
+    <p><a href="https://www.youtube.com/results?search_query=Bad+News+Stellar+Black+Gryph0n+Baasik+official" target="_blank" rel="noopener">Find “Bad News” on YouTube ↗</a></p>
+    <div class="floral-divider" aria-hidden="true">✿ ❀ ✿</div>
+    <p><strong>For the soft, hopeful, dandelions-and-wishes kind of love:</strong> “Dandelions” — Ruth B.</p>
+    <p><a href="https://www.youtube.com/results?search_query=Dandelions+Ruth+B+official" target="_blank" rel="noopener">Find “Dandelions” on YouTube ↗</a></p>
+    <p class="tiny">Tip: copyrighted songs aren't bundled into the website. These links let you play the tracks through the music platform, and the video remains right here on the page.</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="section-kicker">A gallery of my favourite human</div>
+  <h2>Little moments, big love.</h2>
+  <p class="intro">Every photo is a tiny time machine. Tap any picture to see it properly.</p>
+  <div class="gallery" id="galleryGrid"></div>
+  <p class="gallery-note">Some of our memories are in photos. The best ones are still tucked away in our heads.</p>
+</section>
+
+<div class="promise" id="promise">
+  <div class="promise-inner">
+    <div class="section-kicker">One thing I hope you always know</div>
+    <h2>You never have to earn your place with me.</h2>
+    <blockquote>“You don't have to stay the same for me to stay. We can grow, change, get things wrong, find ourselves again — and still find our way back to each other.”</blockquote>
+    <p class="small">Here's to the friendship that began with a bus seat and somehow became one of the safest, most important parts of my life. Whatever the next decade looks like, I hope we get to be in it together.</p>
+  </div>
+</div>
+
+<section class="closing">
+  <div class="section-kicker">Happy birthday, my love</div>
+  <h2>To ten years behind us<br>and a lifetime ahead.</h2>
+  <div class="big-heart">♡</div>
+  <p class="intro">I love you, Mariyam. Today, tomorrow, and in every version of life we haven't met yet.</p>
+  <button class="primary" id="heartBtn">One more hug? ♡</button>
+  <p class="tiny">P.S. You still owe me a pizza-box-opening masterclass.</p>
+</section>
+</main>
+<footer>MADE WITH LOVE · FOR MARIYAM · TEN YEARS AND COUNTING ♡</footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="close" id="closeLightbox" aria-label="Close photo">×</button><img id="lightboxImg" alt="Mariyam memory">
+</div>
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+<script>
+const photos = [
+  ["1000230100.jpg","A smile I hope life gives you a thousand more reasons for."],
+  ["1000230098.jpg","A little main-character moment."],
+  ["1000230096.jpg","One of those photos that feels like you."],
+  ["1000230092.jpg","A memory worth keeping."],
+  ["1000230090.jpg","Beautiful, even when you don't notice it."],
+  ["1000230088.jpg","A little sunshine, a little chaos."],
+  ["1000230086.jpg","One for the time capsule."],
+  ["1000230084.jpg","A favourite face, always."],
+  ["1000230082.jpg","A moment I get to keep."],
+  ["1000230080.jpg","The Mariyam I know and love."],
+  ["1000230078.jpg","A whole story in one picture."],
+  ["1000230076.jpg","The kind of day you want to pause."],
+  ["1000230074.jpg","Soft light, softer memories."],
+  ["1000230064.jpg","A tiny piece of our decade."],
+  ["1000230062.jpg","One day, we'll laugh about everything."],
+  ["1000230054.jpg","A little reminder of all the life we've lived."],
+  ["1000230053.jpg","For the memories we keep making."],
+  ["1000230052.jpg","The story is still going."],
+  ["1000230047.jpg","To many, many more chapters."]
+];
+const grid=document.getElementById("galleryGrid");
+photos.forEach(([file,caption])=>{
+  const b=document.createElement("button");b.className="photo";b.type="button";b.setAttribute("aria-label",caption);
+  const im=document.createElement("img");im.src="assets/"+file;im.alt=caption;im.loading="lazy";
+  b.appendChild(im);b.addEventListener("click",()=>showPhoto("assets/"+file,caption));grid.appendChild(b);
+});
+const lightbox=document.getElementById("lightbox"), lbimg=document.getElementById("lightboxImg");
+function showPhoto(src,alt){lbimg.src=src;lbimg.alt=alt;lightbox.classList.add("open");document.body.style.overflow="hidden"}
+function closePhoto(){lightbox.classList.remove("open");document.body.style.overflow="";lbimg.src=""}
+document.getElementById("closeLightbox").addEventListener("click",closePhoto);
+lightbox.addEventListener("click",e=>{if(e.target===lightbox)closePhoto()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closePhoto()});
+document.getElementById("openBtn").addEventListener("click",()=>{document.getElementById("letter").scrollIntoView({behavior:"smooth"});burst(22)});
+document.getElementById("heartBtn").addEventListener("click",()=>burst(36));
+function burst(n){const wrap=document.getElementById("hearts");const symbols=["♡","♥","✦","✿"];for(let i=0;i<n;i++){const el=document.createElement("span");el.className="heart";el.textContent=symbols[Math.floor(Math.random()*symbols.length)];el.style.left=Math.random()*100+"%";el.style.fontSize=(14+Math.random()*20)+"px";el.style.color=["#a5c9e5","#6f9fc5","#c5dbea","#a9c7b4"][Math.floor(Math.random()*4)];el.style.animationDuration=(3+Math.random()*3)+"s";wrap.appendChild(el);setTimeout(()=>el.remove(),6500)}}
+</script>
+</body>
+</html>
